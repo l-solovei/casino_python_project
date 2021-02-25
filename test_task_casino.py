@@ -2,6 +2,7 @@ import random
 casino_list = []
 game_machine_list = []
 
+
 class User:
     def __init__(self, name: str, money: float):
         self.name = name
@@ -131,6 +132,7 @@ class Casino:
 
 class GameMachine:
     class_counter = 1
+
     def __init__(self, number: float):
         if number >= 0:
             self.__number = float(number)
@@ -157,8 +159,8 @@ class GameMachine:
             self.__number -= number
             return self.__number
 
-#    можна зробити сеттер: @getMoney.setter
-    # але тоді: def getMoney(self, number: float) -> float:
+#    can be a setter: @getMoney.setter
+    # but: def getMoney(self, number: float) -> float:
     def addMoney(self, number: float) -> float:
         if number >= 0:
             self.__number += number
